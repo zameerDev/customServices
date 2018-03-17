@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Services</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="customServicesApp" ng-controller="CustomServicesController">
+	<input type="text" ng-model="firstNum"><br/>
+	<input type="text" ng-model="secondNum"><br/>
+	<button ng-click="addNumbers()">ADD</button>
+	Result: {{sum}}
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="customServicesController.js"></script>
+	<script type="text/javascript" src="calculateService.js"></script>
+</body>
+</html>
