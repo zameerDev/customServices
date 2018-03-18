@@ -5,13 +5,29 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 <body ng-app="customServicesApp" ng-controller="CustomServicesController">
-	<button ng-click="addNumbers()">Get User Details</button>
+	<button ng-click="getData()">Get User Details using factory Service</button>
 	<table ng-if="users">
 		<tr><th>Name</th><th>Age</th></tr>
 		<tr ng-repeat="user in users"><td>{{user.name}}</td><td>{{user.age}}</td></tr>
 	</table>
+	<br><br>
+	<hr>
+	<button ng-click="getDataFrmServc()">Get User Details using service Service</button>
+	<table ng-if="usersfrmsrvc">
+		<tr><th>Name</th><th>Age</th></tr>
+		<tr ng-repeat="user in usersfrmsrvc"><td>{{user.name}}</td><td>{{user.age}}</td></tr>
+	</table>
+	<br><br>
+	<hr>
+	<button ng-click="getDataFrmProv()">Get User Details using provider Service</button>
+	<table ng-if="usersDetails">
+		<tr><th>Name</th><th>Age</th></tr>
+		<tr ng-repeat="user in usersDetails"><td>{{user.name}}</td><td>{{user.age}}</td></tr>
+	</table>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="customServicesController.js"></script>
 	<script type="text/javascript" src="factoryService.js"></script>
+	<script type="text/javascript" src="serviceService.js"></script>
+	<script type="text/javascript" src="providerService.js"></script>
 </body>
 </html>

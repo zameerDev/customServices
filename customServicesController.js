@@ -1,10 +1,20 @@
-app.controller('CustomServicesController', ['$scope', 'factService', function($scope, factService){
-	$scope.firstNum = 10;
-	$scope.secondNum = 20;
+app.controller('CustomServicesController', ['$scope', 'factService', 'srvcService', 'provService',function($scope, factService, srvcService, provService){
 
-	$scope.addNumbers = function(){
-		factService.addNumbers($scope.firstNum, $scope.secondNum, function(res){
+	$scope.getData = function(){
+		factService.details(function(res){
 			$scope.users = res;
+		});
+	};
+
+	$scope.getDataFrmServc = function(){
+		srvcService.fetchDetails(function(result){
+			$scope.usersfrmsrvc = result;
+		});
+	};
+
+	$scope.getDataFrmProv = function(){
+		provService.getuserDetails(function(reslt){
+			$scope.usersDetails = reslt;
 		});
 	}
 }]);

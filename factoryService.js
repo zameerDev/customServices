@@ -1,7 +1,6 @@
 app.factory('factService', ['$http', '$log' , function($http, $log){
-		$log.log("Service invoked");
-		var sumObj = {};
-		sumObj.addNumbers = function(a, b, cb){
+		var usersObj = {};
+		usersObj.details = function(cb){
 			// var s = parseInt(a) + parseInt(b);
 			// cb(s);
 			$http({
@@ -15,5 +14,5 @@ app.factory('factService', ['$http', '$log' , function($http, $log){
 			})
 		};
 
-		return sumObj;
+		return usersObj;
 }]);
