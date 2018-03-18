@@ -5,12 +5,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 <body ng-app="customServicesApp" ng-controller="CustomServicesController">
-	<input type="text" ng-model="firstNum"><br/>
-	<input type="text" ng-model="secondNum"><br/>
-	<button ng-click="addNumbers()">ADD</button>
-	Result: {{sum}}
+	<button ng-click="addNumbers()">Get User Details</button>
+	<table ng-if="users">
+		<tr><th>Name</th><th>Age</th></tr>
+		<tr ng-repeat="user in users"><td>{{user.name}}</td><td>{{user.age}}</td></tr>
+	</table>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="customServicesController.js"></script>
-	<script type="text/javascript" src="calculateService.js"></script>
+	<script type="text/javascript" src="factoryService.js"></script>
 </body>
 </html>

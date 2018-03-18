@@ -1,8 +1,10 @@
-app.controller('CustomServicesController', ['$scope', 'calcService', function($scope, calcService){
+app.controller('CustomServicesController', ['$scope', 'factService', function($scope, factService){
 	$scope.firstNum = 10;
 	$scope.secondNum = 20;
 
 	$scope.addNumbers = function(){
-		$scope.sum = calcService.addNumbers($scope.firstNum, $scope.secondNum);
+		factService.addNumbers($scope.firstNum, $scope.secondNum, function(res){
+			$scope.users = res;
+		});
 	}
 }]);
